@@ -9,7 +9,7 @@ bundle:
     stage: bundle
     script:
         - npm install
-        - npm run start
+        
 
 build:
   image: docker:stable
