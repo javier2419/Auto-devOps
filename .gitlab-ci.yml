@@ -17,8 +17,8 @@ build:
   services:
     - docker:dind
   script:
-    - docker login "$CI_REGISTRY"
-    - docker build -t "$CI_REGISTRY_IMAGE" .
-    - docker push "$CI_REGISTRY_IMAGE"
+    - docker login registry.gitlab.com
+    - docker -t registry.gitlab.com/jtorrealba3200/demo-autodevops .
+    - docker push registry.gitlab.com/jtorrealba3200/demo-autodevops
   only:
     - master
