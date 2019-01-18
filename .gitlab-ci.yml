@@ -1,0 +1,12 @@
+stages:
+  - bundle
+  - test
+  - build
+  - deploy 
+
+bundle:
+    image: node:alpine
+    stage: bundle
+    script:
+        - npm install
+        - npm run start
