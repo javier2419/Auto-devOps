@@ -17,7 +17,7 @@ build:
   services:
     - docker:dind
   script:
-    - docker login registry.gitlab.com
+    - docker login registry.gitlab.com -u jtorrealba3200 -p j2419331
     - docker -t registry.gitlab.com/jtorrealba3200/demo-autodevops .
     - docker push registry.gitlab.com/jtorrealba3200/demo-autodevops
   only:
