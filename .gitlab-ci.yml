@@ -26,3 +26,13 @@ build:
 test:
   stage: test
   script: echo "Running test"
+
+deploy_staging:
+  stage: deploy
+  script:
+    - kubectl apply -f k8s/production/srvc-core-auto-devops.yaml
+  environment:
+    name: staging
+    url: 35.184.108.173.nip.io
+  only:
+    - master
