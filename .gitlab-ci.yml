@@ -22,3 +22,7 @@ build:
     - docker push registry.gitlab.com/jtorrealba3200/demo-autodevops
   only:
     - master
+
+test:
+  stage: test
+  script: echo "Running test"
